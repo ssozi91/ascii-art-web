@@ -6,6 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ASCII Art Generator</title>
   <link rel="stylesheet" type="text/css" href="/static/style.css">
+   <script>
+    function validateForm() {
+      var textareaContent = document.getElementById("text").value.trim();
+      if (textareaContent === "") {
+        alert("Textarea cannot be empty!");
+        return false; // Prevent form submission
+      }
+      return true; // Allow form submission
+    }
+  </script>
 </head>
 
 <body>
@@ -13,7 +23,7 @@
     <h1 class="heading">ASCII Art Generator</h1>
     <form action="/ascii-art" method="post">
       <label for="text">Text:</label><br>
-      <textarea id="text" name="text"></textarea><br>
+      <textarea id="text" name="text" placeholder="Enter something to generate ASCII-ART..."></textarea><br>
       <label for="artFile">Art File:</label><br>
       <select id="artFile" name="artFile">
         <option value="standard.txt">Standard</option>
