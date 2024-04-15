@@ -21,7 +21,7 @@
 <body>
   <div class="container">
     <h1 class="heading">ASCII Art Generator</h1>
-    <form action="/ascii-art" method="post">
+    <form action="/ascii-art" method="post" onsubmit="return validateForm()">
       <label for="text">Text:</label><br>
       <textarea id="text" name="text" placeholder="Enter something to generate ASCII-ART..."></textarea><br>
       <label for="artFile">Art File:</label><br>
